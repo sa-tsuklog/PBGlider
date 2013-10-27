@@ -1,0 +1,13 @@
+-We=--template_info_file="src\Peripherals\tpldir\GpsCrReceivedHandler.ti"
+-We=--ii_file="src\Peripherals\tpldir\GpsCrReceivedHandler.ii"
+-We=--no_auto_instantiation
+ 
+-output=obj="src\Peripherals\GpsCrReceivedHandler.obj"
+-nologo
+-include="C:\PROGRA~2\Renesas\Hew\Tools\Renesas\RX\1_2_1\include"
+-debug
+-change_message=warning
+-cpu=rx600
+-define=__RX
+-lang=cpp
+"..\src\Peripherals\GpsCrReceivedHandler.cpp"

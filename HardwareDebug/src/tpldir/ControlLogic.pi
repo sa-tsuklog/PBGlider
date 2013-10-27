@@ -1,0 +1,13 @@
+-We=--template_info_file="src\tpldir\ControlLogic.ti"
+-We=--ii_file="src\tpldir\ControlLogic.ii"
+-We=--no_auto_instantiation
+ 
+-output=obj="src\ControlLogic.obj"
+-nologo
+-include="C:\PROGRA~2\Renesas\Hew\Tools\Renesas\RX\1_2_1\include"
+-debug
+-change_message=warning
+-cpu=rx600
+-define=__RX
+-lang=cpp
+"..\src\ControlLogic.cpp"

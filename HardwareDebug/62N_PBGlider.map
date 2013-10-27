@@ -1,0 +1,1954 @@
+Optimizing Linkage Editor (V.10.02.00.000)        14-Oct-2013 21:53:50
+
+*** Options ***
+
+-subcommand=E:/MyDocument/Dropbox/EmbededProjects/62N_PBGlider\HardwareDebug\LinkerSubCommand.tmp
+-input="./src/62N_PBGlider.obj"
+-input="./src/ControlLogic.obj"
+-input="./src/ControlLoop.obj"
+-input="./src/GeneralConfig.obj"
+-input="./src/Util.obj"
+-input="./src/dbsct.obj"
+-input="./src/interrupt_handlers.obj"
+-input="./src/reset_program.obj"
+-input="./src/sbrk.obj"
+-input="./src/vector_table.obj"
+-input="./src/Peripherals/Bmp085.obj"
+-input="./src/Peripherals/GpsCrReceivedHandler.obj"
+-input="./src/Peripherals/Inu.obj"
+-input="./src/Peripherals/KalmanFilter.obj"
+-input="./src/Peripherals/KalmanFilter_2x2.obj"
+-input="./src/Peripherals/Mpu9150.obj"
+-input="./src/Peripherals/OrientationFilter.obj"
+-input="./src/Peripherals/Quaternion.obj"
+-input="./src/Peripherals/RangeFinder.obj"
+-input="./src/Peripherals/Servo.obj"
+-input="./src/Peripherals/StdSci.obj"
+-input="./src/Peripherals/Storage.obj"
+-input="./src/Peripherals/Hals/HalFlash.obj"
+-input="./src/Peripherals/Hals/HalI2C.obj"
+-input="./src/Peripherals/Hals/HalRangeFinderMtu.obj"
+-input="./src/Peripherals/Hals/HalSci0.obj"
+-input="./src/Peripherals/Hals/HalSci5.obj"
+-input="./src/Peripherals/Hals/HalServoMtus.obj"
+-start=SU,SI,B_1,R_1,B_2,R_2,B,R/0,PResetPRG/0FFFA0000,C_1,C_2,C,C$*,D*,W*,L/0FFFA1000,PIntPRG/0FFFA6000,P/0FFFA8000,FIXEDVECT/0FFFFFF80
+-library=E:\MYDOCU~1\Dropbox\EMBEDE~1\62N_PB~1\HARDWA~2\62N_PBGlider.lib
+-noprelink
+-list=62N_PBGlider.map
+-show
+-nooptimize
+-rom=D=R,D_1=R_1,D_2=R_2
+-nomessage
+-nologo
+-output=E:\MyDocument\Dropbox\EmbededProjects\62N_PBGlider\HardwareDebug\62N_PBGlider.abs
+
+*** Error information ***
+
+*** Mapping List ***
+
+SECTION                            START      END         SIZE   ALIGN
+
+SU
+                                  00000000  000001ff       200   4
+SI
+                                  00000200  000007ff       600   4
+B_1
+                                  00000800  00000800         0   1
+R_1
+                                  00000800  00000801         2   1
+B_2
+                                  00000802  00001003       802   2
+R_2
+                                  00001004  00001011         e   2
+B
+                                  00001014  0000228f      127c   4
+R
+                                  00002290  0000232b        9c   4
+PResetPRG
+                                  fffa0000  fffa0038        39   1
+C_1
+                                  fffa1000  fffa1000         0   1
+C_2
+                                  fffa1000  fffa1000         0   2
+C
+                                  fffa1000  fffa11c3       1c4   4
+C$VTBL
+                                  fffa11c4  fffa13bb       1f8   4
+C$DSEC
+                                  fffa13bc  fffa13df        24   4
+C$BSEC
+                                  fffa13e0  fffa13f7        18   4
+C$INIT
+                                  fffa13f8  fffa140f        18   4
+C$VECT
+                                  fffa1410  fffa180f       400   4
+D
+                                  fffa1810  fffa18ab        9c   4
+D_2
+                                  fffa18ac  fffa18b9         e   2
+D_1
+                                  fffa18ba  fffa18bb         2   1
+W_1
+                                  fffa18bc  fffa18bc         0   1
+W_2
+                                  fffa18bc  fffa18cd        12   2
+W
+                                  fffa18d0  fffa18d0         0   4
+L
+                                  fffa18d0  fffa1ede       60f   4
+PIntPRG
+                                  fffa6000  fffa6147       148   1
+P
+                                  fffa8000  fffb020c      820d   1
+FIXEDVECT
+                                  ffffff80  ffffffff        80   4
+
+*** Symbol List ***
+
+SECTION=
+FILE=                               START        END    SIZE
+  SYMBOL                            ADDR        SIZE    INFO      COUNTS  OPT
+
+SECTION=SU
+FILE=.\src\reset_program.obj
+                                  00000000  000001ff       200
+
+SECTION=SI
+FILE=.\src\reset_program.obj
+                                  00000200  000007ff       600
+
+SECTION=R_1
+FILE=.\src\Peripherals\Hals\HalI2C.obj
+                                  00000800  00000801         2
+  I2C::overrunFlag
+                                  00000800         1   data ,g         1
+  I2C::bufferEmptyFlag
+                                  00000801         1   data ,g         4
+
+SECTION=B_2
+FILE=.\src\Peripherals\Hals\HalFlash.obj
+                                  00000802  00001003       802
+  HalFlash::blockBuf
+                                  00000802       800   data ,g         5
+  HalFlash::currentBlock
+                                  00001002         2   data ,g         5
+
+SECTION=R_2
+FILE=sqrtf
+                                  00001004  00001011         e
+  _cf1S
+                                  00001004         e   data ,l         1
+
+SECTION=B
+FILE=.\src\GeneralConfig.obj
+                                  00001014  0000102b        18
+  _stdout
+                                  00001014         4   data ,g        34
+  _mpu9150
+                                  00001018         4   data ,g         8
+  _inu
+                                  0000101c         4   data ,g         5
+  _rangeFinder
+                                  00001020         4   data ,g         4
+  _controlLoop
+                                  00001024         4   data ,g         6
+  _gps
+                                  00001028         4   data ,g         6
+FILE=.\src\sbrk.obj
+                                  0000102c  0000202b      1000
+  _heap_area
+                                  0000102c      1000   data ,l         2
+FILE=.\src\Peripherals\Mpu9150.obj
+                                  0000202c  0000203b        10
+  Mpu9150::instance
+                                  0000202c         4   data ,g         2
+  Mpu9150::gyroSum
+                                  00002030         c   data ,g         1
+FILE=.\src\Peripherals\OrientationFilter.obj
+                                  0000203c  00002073        38
+  OrientationFilter::zeta
+                                  0000203c         4   data ,g         1
+  OrientationFilter::attitude
+                                  00002040        10   data ,g         4
+  OrientationFilter::q0
+                                  00002050         4   data ,g         c
+  OrientationFilter::q1
+                                  00002054         4   data ,g         e
+  OrientationFilter::q2
+                                  00002058         4   data ,g        10
+  OrientationFilter::q3
+                                  0000205c         4   data ,g         f
+  OrientationFilter::b_x
+                                  00002060         4   data ,g         1
+  OrientationFilter::b_z
+                                  00002064         4   data ,g         1
+  OrientationFilter::w_bx
+                                  00002068         4   data ,g         2
+  OrientationFilter::w_by
+                                  0000206c         4   data ,g         2
+  OrientationFilter::w_bz
+                                  00002070         4   data ,g         2
+FILE=.\src\Peripherals\Hals\HalI2C.obj
+                                  00002074  00002277       204
+  I2C::i2cPacketBuf
+                                  00002074       200   data ,g         7
+  I2C::i2cStatus
+                                  00002274         4   data ,g         8
+FILE=.\src\Peripherals\Hals\HalRangeFinderMtu.obj
+                                  00002278  0000227b         4
+  HalRangeFinderMtu::halRangeFinderMtu
+                                  00002278         4   data ,g         2
+FILE=.\src\Peripherals\Hals\HalSci0.obj
+                                  0000227c  0000227f         4
+  HalSci0::halSci0
+                                  0000227c         4   data ,g         2
+FILE=.\src\Peripherals\Hals\HalSci5.obj
+                                  00002280  00002283         4
+  HalSci5::halSci5
+                                  00002280         4   data ,g         2
+FILE=.\src\Peripherals\Hals\HalServoMtus.obj
+                                  00002284  00002287         4
+  HalServoMtus::halServoMtus
+                                  00002284         4   data ,g         2
+FILE=dtor_list
+                                  00002288  0000228b         4
+  _needed_destruction_head
+                                  00002288         4   data ,l         3
+FILE=_errno
+                                  0000228c  0000228f         4
+  __errno
+                                  0000228c         4   data ,g         7
+
+SECTION=R
+FILE=.\src\ControlLoop.obj
+                                  00002290  0000229b         c
+  _printLoopCounter$57
+                                  00002290         4   data ,l         1
+  _printLoopCounter$72
+                                  00002294         4   data ,l         1
+  _printLoopCounter$88
+                                  00002298         4   data ,l         1
+FILE=.\src\sbrk.obj
+                                  0000229c  0000229f         4
+  _brk
+                                  0000229c         4   data ,l         1
+FILE=.\src\Peripherals\Mpu9150.obj
+                                  000022a0  000022a7         8
+  _sensorCounter$92
+                                  000022a0         4   data ,l         1
+  _callCount$141
+                                  000022a4         4   data ,l         1
+FILE=.\src\Peripherals\OrientationFilter.obj
+                                  000022a8  000022bb        14
+  OrientationFilter::beta
+                                  000022a8         4   data ,g         4
+  _callCount$2
+                                  000022ac         4   data ,l         1
+  ___T1000001$117
+                                  000022b0         c   data ,l         1
+FILE=.\src\Peripherals\Hals\HalI2C.obj
+                                  000022bc  000022c7         c
+  I2C::sentPointer
+                                  000022bc         4   data ,g         9
+  I2C::writtenPointer
+                                  000022c0         4   data ,g         3
+  I2C::busyCount
+                                  000022c4         4   data ,g         2
+FILE=sqrtf
+                                  000022c8  000022cb         4
+  _nan_value
+                                  000022c8         4   data ,l         1
+FILE=malloc
+                                  000022cc  000022d3         8
+  __Aldata
+                                  000022cc         8   data ,g         6
+FILE=sincosfsub
+                                  000022d4  0000230f        3c
+  _sinf_coeff
+                                  000022d4        10   data ,l         1
+  _cosf_coeff
+                                  000022e4        10   data ,l         1
+  _pi4ptr_table
+                                  000022f4         c   data ,l         1
+  _sub_table
+                                  00002300        10   data ,l         1
+FILE=static_init
+                                  00002310  00002317         8
+  _use_patch_info
+                                  00002310         4   data ,l         1
+  _dtors_done$3
+                                  00002314         4   data ,l         1
+FILE=vars
+                                  00002318  0000231f         8
+  __new_handler
+                                  00002318         4   data ,g         1
+  ___head
+                                  0000231c         4   data ,g         1
+FILE=vec_newdel
+                                  00002320  00002323         4
+  ___array_new_prefix_size
+                                  00002320         4   data ,g         c
+FILE=new_cnst
+                                  00002324  00002327         4
+  __ec2p_new_handler
+                                  00002324         4   data ,g         1
+FILE=munch_dtors
+                                  00002328  0000232b         4
+  __dtors
+                                  00002328         4   data ,g         2
+
+SECTION=PResetPRG
+FILE=.\src\reset_program.obj
+                                  fffa0000  fffa0038        39
+  _PowerON_Reset
+                                  fffa0000        39   entry,g         1
+
+SECTION=C
+FILE=.\src\ControlLogic.obj
+                                  fffa1000  fffa1003         4
+  _headingTau$15
+                                  fffa1000         4   data ,l         1
+FILE=.\src\dbsct.obj
+                                  fffa1004  fffa1037        34
+  __CTBL
+                                  fffa1004        34   data ,g         0
+FILE=.\src\Peripherals\OrientationFilter.obj
+                                  fffa1038  fffa104f        18
+  OrientationFilter::sampleFreq
+                                  fffa1038         4   data ,g         0
+  OrientationFilter::gyroMeasError
+                                  fffa103c         4   data ,g         0
+  OrientationFilter::gyroMeasDrift
+                                  fffa1040         4   data ,g         0
+  OrientationFilter::initialBeta
+                                  fffa1044         4   data ,g         0
+  OrientationFilter::lastBeta
+                                  fffa1048         4   data ,g         0
+  OrientationFilter::betaStabilizationTime
+                                  fffa104c         4   data ,g         0
+FILE=asincosfsub
+                                  fffa1050  fffa108f        40
+  ___asincosf_const_tbl
+                                  fffa1050         8   data ,g         1
+  ___asinf_coeff
+                                  fffa1058        24   data ,g         1
+  _acosf_coeff
+                                  fffa107c        14   data ,l         2
+FILE=_sbrk_si
+                                  fffa1090  fffa1093         4
+  __sbrk_size
+                                  fffa1090         4   data ,g         1
+FILE=_i_atans
+                                  fffa1094  fffa10ab        18
+  _ATQ1$11
+                                  fffa1094         4   data ,l         1
+  _ATQ2$12
+                                  fffa1098         4   data ,l         1
+  _ATQ3$13
+                                  fffa109c         4   data ,l         1
+  _THQUO$14
+                                  fffa10a0         4   data ,l         1
+  _NTHQUO$15
+                                  fffa10a4         4   data ,l         1
+  _EIGHT$16
+                                  fffa10a8         4   data ,l         1
+FILE=_in_exps
+                                  fffa10ac  fffa10e7        3c
+  _LOG2E$27
+                                  fffa10ac         4   data ,l         1
+  _exp_lcoef$26
+                                  fffa10b0        1c   data ,l         1
+  _exp_hcoef$25
+                                  fffa10cc        1c   data ,l         1
+FILE=_in_logs
+                                  fffa10e8  fffa1107        20
+  _log_coef$19
+                                  fffa10e8        20   data ,l         1
+FILE=consts
+                                  fffa1108  fffa115f        58
+  __IFZEROS
+                                  fffa1108         4   data ,g         5
+  __IFONES
+                                  fffa110c         4   data ,g         5
+  __HALFS
+                                  fffa1110         4   data ,g         1
+  __QUOTS
+                                  fffa1114         4   data ,g         0
+  __TWOS
+                                  fffa1118         4   data ,g         0
+  __FOURS
+                                  fffa111c         4   data ,g         0
+  __PAIS
+                                  fffa1120         4   data ,g         1
+  __2PAIS
+                                  fffa1124         4   data ,g         0
+  __HLFPAIS
+                                  fffa1128         4   data ,g         1
+  __QUOPAIS
+                                  fffa112c         4   data ,g         2
+  __LOGE2S
+                                  fffa1130         4   data ,g         2
+  __NIFZEROS
+                                  fffa1134         4   data ,g         1
+  __NIFONES
+                                  fffa1138         4   data ,g         4
+  __NHALFS
+                                  fffa113c         4   data ,g         1
+  __NQUOTS
+                                  fffa1140         4   data ,g         1
+  __NTWOS
+                                  fffa1144         4   data ,g         0
+  __NFOURS
+                                  fffa1148         4   data ,g         0
+  __NPAIS
+                                  fffa114c         4   data ,g         1
+  __N2PAIS
+                                  fffa1150         4   data ,g         0
+  __NHLFPAIS
+                                  fffa1154         4   data ,g         0
+  __NQUOPAIS
+                                  fffa1158         4   data ,g         0
+  __NLOGE2S
+                                  fffa115c         4   data ,g         0
+FILE=_const
+                                  fffa1160  fffa1183        24
+  __IFNAND
+                                  fffa1160         0   none ,g         0
+  __IFINFD
+                                  fffa1168         0   none ,g         0
+  __NIFINFD
+                                  fffa1170         0   none ,g         0
+  __IFNANS
+                                  fffa1178         0   none ,g         6
+  __IFINFS
+                                  fffa117c         0   none ,g         3
+  __NIFINFS
+                                  fffa1180         0   none ,g         2
+FILE=_a_atans
+                                  fffa1184  fffa119b        18
+  _atan_coef$9
+                                  fffa1184        18   data ,l         1
+FILE=floatval
+                                  fffa119c  fffa11c3        28
+  __FLT_MAX_VAL
+                                  fffa119c         0   none ,g         1
+  __FLT_MIN_VAL
+                                  fffa11a0         0   none ,g         0
+  __DBL_MAX_VAL
+                                  fffa11a4         0   none ,g         0
+  __DBL_MIN_VAL
+                                  fffa11ac         0   none ,g         0
+  __LDBL_MAX_VAL
+                                  fffa11b4         0   none ,g         0
+  __LDBL_MIN_VAL
+                                  fffa11bc         0   none ,g         0
+
+SECTION=C$VTBL
+FILE=.\src\62N_PBGlider.obj
+                                  fffa11c4  fffa120b        48
+  virtual function table for EventHandler
+                                  fffa11c4        24   data ,l         2
+  virtual function table for CrReceivedHandler
+                                  fffa11e8        24   data ,l         2
+FILE=.\src\Peripherals\GpsCrReceivedHandler.obj
+                                  fffa120c  fffa1253        48
+  virtual function table for EventHandler
+                                  fffa120c        24   data ,l         2
+  virtual function table for GpsCrReceivedHandler
+                                  fffa1230        24   data ,g         2
+FILE=.\src\Peripherals\Servo.obj
+                                  fffa1254  fffa128f        3c
+  virtual function table for Servo
+                                  fffa1254        3c   data ,g         2
+FILE=.\src\Peripherals\StdSci.obj
+                                  fffa1290  fffa12bf        30
+  virtual function table for WrapperBufferedSci
+                                  fffa1290        30   data ,l         1
+FILE=.\src\Peripherals\Hals\HalSci0.obj
+                                  fffa12c0  fffa131f        60
+  virtual function table for WrapperBufferedSci
+                                  fffa12c0        30   data ,l         1
+  virtual function table for HalSci0
+                                  fffa12f0        30   data ,g         1
+FILE=.\src\Peripherals\Hals\HalSci5.obj
+                                  fffa1320  fffa137f        60
+  virtual function table for WrapperBufferedSci
+                                  fffa1320        30   data ,l         1
+  virtual function table for HalSci5
+                                  fffa1350        30   data ,g         1
+FILE=.\src\Peripherals\Hals\HalServoMtus.obj
+                                  fffa1380  fffa13bb        3c
+  virtual function table for HalServoMtus
+                                  fffa1380        3c   data ,g         2
+
+SECTION=C$DSEC
+FILE=.\src\dbsct.obj
+                                  fffa13bc  fffa13df        24
+  __DTBL
+                                  fffa13bc        24   data ,g         0
+
+SECTION=C$BSEC
+FILE=.\src\dbsct.obj
+                                  fffa13e0  fffa13f7        18
+  __BTBL
+                                  fffa13e0        18   data ,g         0
+
+SECTION=C$INIT
+FILE=.\src\Peripherals\OrientationFilter.obj
+                                  fffa13f8  fffa13fb         4
+  ___link
+                                  fffa13f8         4   data ,l         0
+FILE=.\src\Peripherals\Hals\HalI2C.obj
+                                  fffa13fc  fffa13ff         4
+  ___link
+                                  fffa13fc         4   data ,l         0
+FILE=.\src\Peripherals\Hals\HalRangeFinderMtu.obj
+                                  fffa1400  fffa1403         4
+  ___link
+                                  fffa1400         4   data ,l         0
+FILE=.\src\Peripherals\Hals\HalSci0.obj
+                                  fffa1404  fffa1407         4
+  ___link
+                                  fffa1404         4   data ,l         0
+FILE=.\src\Peripherals\Hals\HalSci5.obj
+                                  fffa1408  fffa140b         4
+  ___link
+                                  fffa1408         4   data ,l         0
+FILE=.\src\Peripherals\Hals\HalServoMtus.obj
+                                  fffa140c  fffa140f         4
+  ___link
+                                  fffa140c         4   data ,l         0
+
+SECTION=C$VECT
+FILE=.\src\dbsct.obj
+                                  fffa1410  fffa180f       400
+
+SECTION=D
+FILE=.\src\ControlLoop.obj
+                                  fffa1810  fffa181b         c
+FILE=.\src\sbrk.obj
+                                  fffa181c  fffa181f         4
+FILE=.\src\Peripherals\Mpu9150.obj
+                                  fffa1820  fffa1827         8
+FILE=.\src\Peripherals\OrientationFilter.obj
+                                  fffa1828  fffa183b        14
+FILE=.\src\Peripherals\Hals\HalI2C.obj
+                                  fffa183c  fffa1847         c
+FILE=sqrtf
+                                  fffa1848  fffa184b         4
+FILE=malloc
+                                  fffa184c  fffa1853         8
+FILE=sincosfsub
+                                  fffa1854  fffa188f        3c
+FILE=static_init
+                                  fffa1890  fffa1897         8
+FILE=vars
+                                  fffa1898  fffa189f         8
+FILE=vec_newdel
+                                  fffa18a0  fffa18a3         4
+FILE=new_cnst
+                                  fffa18a4  fffa18a7         4
+FILE=munch_dtors
+                                  fffa18a8  fffa18ab         4
+
+SECTION=D_2
+FILE=sqrtf
+                                  fffa18ac  fffa18b9         e
+
+SECTION=D_1
+FILE=.\src\Peripherals\Hals\HalI2C.obj
+                                  fffa18ba  fffa18bb         2
+
+SECTION=W_2
+FILE=_i_atans
+                                  fffa18bc  fffa18cd        12
+
+SECTION=L
+FILE=.\src\62N_PBGlider.obj
+                                  fffa18d0  fffa1a42       173
+FILE=.\src\ControlLoop.obj
+                                  fffa1a44  fffa1d5b       318
+FILE=.\src\Peripherals\GpsCrReceivedHandler.obj
+                                  fffa1d5c  fffa1d68         d
+FILE=.\src\Peripherals\KalmanFilter.obj
+                                  fffa1d6c  fffa1d99        2e
+FILE=.\src\Peripherals\Mpu9150.obj
+                                  fffa1d9c  fffa1e77        dc
+FILE=.\src\Peripherals\Quaternion.obj
+                                  fffa1e78  fffa1e9a        23
+FILE=.\src\Peripherals\StdSci.obj
+                                  fffa1e9c  fffa1ea4         9
+FILE=.\src\Peripherals\Hals\HalFlash.obj
+                                  fffa1ea8  fffa1ed8        31
+FILE=.\src\Peripherals\Hals\HalSci0.obj
+                                  fffa1edc  fffa1ede         3
+
+SECTION=PIntPRG
+FILE=.\src\interrupt_handlers.obj
+                                  fffa6000  fffa6147       148
+  _Excep_SuperVisorInst
+                                  fffa6000         2   func ,g         1
+  _Excep_AccessInst
+                                  fffa6002         1   func ,g         1
+  _Excep_UndefinedInst
+                                  fffa6003         2   func ,g         1
+  _Excep_FloatingPoint
+                                  fffa6005         2   func ,g         1
+  _NonMaskableInterrupt
+                                  fffa6007         2   func ,g         1
+  _Dummy
+                                  fffa6009         2   func ,g        16
+  _Excep_BRK
+                                  fffa600b         4   func ,g         0
+  _Excep_BSC_BUSERR
+                                  fffa600f         2   func ,g         0
+  _Excep_FCU_FIFERR
+                                  fffa6011         2   func ,g         0
+  _Excep_FCU_FRDYI
+                                  fffa6013         2   func ,g         0
+  _Excep_ICU_SWINT
+                                  fffa6015         2   func ,g         0
+  _Excep_CMT0_CMI0
+                                  fffa6017         1   func ,g         0
+  _Excep_CMT1_CMI1
+                                  fffa6018         2   func ,g         0
+  _Excep_CMT2_CMI2
+                                  fffa601a         2   func ,g         0
+  _Excep_CMT3_CMI3
+                                  fffa601c         2   func ,g         0
+  _Excep_ETHER_EINT
+                                  fffa601e         2   func ,g         0
+  _Excep_USB0_D0FIFO0
+                                  fffa6020         2   func ,g         0
+  _Excep_USB0_D1FIFO0
+                                  fffa6022         2   func ,g         0
+  _Excep_USB0_USBI0
+                                  fffa6024         2   func ,g         0
+  _Excep_USB1_D0FIFO1
+                                  fffa6026         2   func ,g         0
+  _Excep_USB1_D1FIFO1
+                                  fffa6028         2   func ,g         0
+  _Excep_USB1_USBI1
+                                  fffa602a         2   func ,g         0
+  _Excep_RSPI0_SPEI0
+                                  fffa602c         2   func ,g         0
+  _Excep_RSPI0_SPRI0
+                                  fffa602e         2   func ,g         0
+  _Excep_RSPI0_SPTI0
+                                  fffa6030         2   func ,g         0
+  _Excep_RSPI0_SPII0
+                                  fffa6032         2   func ,g         0
+  _Excep_RSPI1_SPEI1
+                                  fffa6034         2   func ,g         0
+  _Excep_RSPI1_SPRI1
+                                  fffa6036         2   func ,g         0
+  _Excep_RSPI1_SPTI1
+                                  fffa6038         2   func ,g         0
+  _Excep_RSPI1_SPII1
+                                  fffa603a         2   func ,g         0
+  _Excep_CAN0_ERS0
+                                  fffa603c         2   func ,g         0
+  _Excep_CAN0_RXF0
+                                  fffa603e         2   func ,g         0
+  _Excep_CAN0_TXF0
+                                  fffa6040         2   func ,g         0
+  _Excep_CAN0_RXM0
+                                  fffa6042         2   func ,g         0
+  _Excep_CAN0_TXM0
+                                  fffa6044         2   func ,g         0
+  _Excep_RTC_PRD
+                                  fffa6046         2   func ,g         0
+  _Excep_RTC_CUP
+                                  fffa6048         2   func ,g         0
+  _Excep_ICU_IRQ0
+                                  fffa604a         2   func ,g         0
+  _Excep_ICU_IRQ1
+                                  fffa604c         2   func ,g         0
+  _Excep_ICU_IRQ2
+                                  fffa604e         2   func ,g         0
+  _Excep_ICU_IRQ3
+                                  fffa6050         2   func ,g         0
+  _Excep_ICU_IRQ4
+                                  fffa6052         2   func ,g         0
+  _Excep_ICU_IRQ5
+                                  fffa6054         2   func ,g         0
+  _Excep_ICU_IRQ6
+                                  fffa6056         2   func ,g         0
+  _Excep_ICU_IRQ7
+                                  fffa6058         2   func ,g         0
+  _Excep_ICU_IRQ8
+                                  fffa605a         2   func ,g         0
+  _Excep_ICU_IRQ9
+                                  fffa605c         2   func ,g         0
+  _Excep_ICU_IRQ10
+                                  fffa605e         2   func ,g         0
+  _Excep_ICU_IRQ11
+                                  fffa6060         2   func ,g         0
+  _Excep_ICU_IRQ12
+                                  fffa6062         2   func ,g         0
+  _Excep_ICU_IRQ13
+                                  fffa6064         2   func ,g         0
+  _Excep_ICU_IRQ14
+                                  fffa6066         2   func ,g         0
+  _Excep_ICU_IRQ15
+                                  fffa6068         2   func ,g         0
+  _Excep_USB_USBR0
+                                  fffa606a         2   func ,g         0
+  _Excep_USB_USBR1
+                                  fffa606c         2   func ,g         0
+  _Excep_RTC_ALM
+                                  fffa606e         2   func ,g         0
+  _Excep_WDT_WOVI
+                                  fffa6070         2   func ,g         0
+  _Excep_AD0_ADI0
+                                  fffa6072         2   func ,g         0
+  _Excep_AD1_ADI1
+                                  fffa6074         2   func ,g         0
+  _Excep_S12AD_ADI
+                                  fffa6076         2   func ,g         0
+  _Excep_MTU0_TGIA0
+                                  fffa6078         2   func ,g         0
+  _Excep_MTU0_TGIB0
+                                  fffa607a         2   func ,g         0
+  _Excep_MTU0_TGIC0
+                                  fffa607c         2   func ,g         0
+  _Excep_MTU0_TGID0
+                                  fffa607e         2   func ,g         0
+  _Excep_MTU0_TCIV0
+                                  fffa6080         2   func ,g         0
+  _Excep_MTU0_TGIE0
+                                  fffa6082         2   func ,g         0
+  _Excep_MTU0_TGIF0
+                                  fffa6084         2   func ,g         0
+  _Excep_MTU1_TGIA1
+                                  fffa6086         2   func ,g         0
+  _Excep_MTU1_TGIB1
+                                  fffa6088         2   func ,g         0
+  _Excep_MTU1_TCIV1
+                                  fffa608a         2   func ,g         0
+  _Excep_MTU1_TCIU1
+                                  fffa608c         2   func ,g         0
+  _Excep_MTU2_TGIA2
+                                  fffa608e         2   func ,g         0
+  _Excep_MTU2_TGIB2
+                                  fffa6090         2   func ,g         0
+  _Excep_MTU2_TCIV2
+                                  fffa6092         2   func ,g         0
+  _Excep_MTU2_TCIU2
+                                  fffa6094         2   func ,g         0
+  _Excep_MTU3_TGIA3
+                                  fffa6096         2   func ,g         0
+  _Excep_MTU3_TGIB3
+                                  fffa6098         2   func ,g         0
+  _Excep_MTU3_TGIC3
+                                  fffa609a         2   func ,g         0
+  _Excep_MTU3_TGID3
+                                  fffa609c         2   func ,g         0
+  _Excep_MTU3_TCIV3
+                                  fffa609e         2   func ,g         0
+  _Excep_MTU4_TGIA4
+                                  fffa60a0         2   func ,g         0
+  _Excep_MTU4_TGIB4
+                                  fffa60a2         2   func ,g         0
+  _Excep_MTU4_TGIC4
+                                  fffa60a4         1   func ,g         0
+  _Excep_MTU4_TGID4
+                                  fffa60a5         2   func ,g         0
+  _Excep_MTU4_TCIV4
+                                  fffa60a7         2   func ,g         0
+  _Excep_MTU5_TGIU5
+                                  fffa60a9         2   func ,g         0
+  _Excep_MTU5_TGIV5
+                                  fffa60ab         2   func ,g         0
+  _Excep_MTU5_TGIW5
+                                  fffa60ad         2   func ,g         0
+  _Excep_MTU6_TGIA6
+                                  fffa60af         2   func ,g         0
+  _Excep_MTU6_TGIB6
+                                  fffa60b1         2   func ,g         0
+  _Excep_MTU6_TGIC6
+                                  fffa60b3         2   func ,g         0
+  _Excep_MTU6_TGID6
+                                  fffa60b5         2   func ,g         0
+  _Excep_MTU6_TCIV6
+                                  fffa60b7         2   func ,g         0
+  _Excep_MTU6_TGIE6
+                                  fffa60b9         2   func ,g         0
+  _Excep_MTU6_TGIF6
+                                  fffa60bb         2   func ,g         0
+  _Excep_MTU7_TGIA7
+                                  fffa60bd         2   func ,g         0
+  _Excep_MTU7_TGIB7
+                                  fffa60bf         2   func ,g         0
+  _Excep_MTU7_TCIV7
+                                  fffa60c1         2   func ,g         0
+  _Excep_MTU7_TCIU7
+                                  fffa60c3         2   func ,g         0
+  _Excep_MTU8_TGIA8
+                                  fffa60c5         2   func ,g         0
+  _Excep_MTU8_TGIB8
+                                  fffa60c7         2   func ,g         0
+  _Excep_MTU8_TCIV8
+                                  fffa60c9         2   func ,g         0
+  _Excep_MTU8_TCIU8
+                                  fffa60cb         2   func ,g         0
+  _Excep_MTU9_TGIA9
+                                  fffa60cd         2   func ,g         0
+  _Excep_MTU9_TGIB9
+                                  fffa60cf         2   func ,g         0
+  _Excep_MTU9_TGIC9
+                                  fffa60d1         2   func ,g         0
+  _Excep_MTU9_TGID9
+                                  fffa60d3         2   func ,g         0
+  _Excep_MTU9_TCIV9
+                                  fffa60d5         2   func ,g         0
+  _Excep_MTU10_TGIA10
+                                  fffa60d7         2   func ,g         0
+  _Excep_MTU10_TGIB10
+                                  fffa60d9         2   func ,g         0
+  _Excep_MTU10_TGIC10
+                                  fffa60db         1   func ,g         0
+  _Excep_MTU10_TGID10
+                                  fffa60dc         2   func ,g         0
+  _Excep_MTU10_TCIV10
+                                  fffa60de         2   func ,g         0
+  _Excep_MTU11_TGIU11
+                                  fffa60e0         2   func ,g         0
+  _Excep_MTU11_TGIV11
+                                  fffa60e2         2   func ,g         0
+  _Excep_MTU11_TGIW11
+                                  fffa60e4         2   func ,g         0
+  _Excep_POE_OEI1
+                                  fffa60e6         2   func ,g         0
+  _Excep_POE_OEI2
+                                  fffa60e8         2   func ,g         0
+  _Excep_POE_OEI3
+                                  fffa60ea         2   func ,g         0
+  _Excep_POE_OEI4
+                                  fffa60ec         2   func ,g         0
+  _Excep_TMR0_CMIA0
+                                  fffa60ee         2   func ,g         0
+  _Excep_TMR0_CMIB0
+                                  fffa60f0         2   func ,g         0
+  _Excep_TMR0_OVI0
+                                  fffa60f2         2   func ,g         0
+  _Excep_TMR1_CMIA1
+                                  fffa60f4         2   func ,g         0
+  _Excep_TMR1_CMIB1
+                                  fffa60f6         2   func ,g         0
+  _Excep_TMR1_OVI1
+                                  fffa60f8         2   func ,g         0
+  _Excep_TMR2_CMIA2
+                                  fffa60fa         2   func ,g         0
+  _Excep_TMR2_CMIB2
+                                  fffa60fc         2   func ,g         0
+  _Excep_TMR2_OVI2
+                                  fffa60fe         2   func ,g         0
+  _Excep_TMR3_CMIA3
+                                  fffa6100         2   func ,g         0
+  _Excep_TMR3_CMIB3
+                                  fffa6102         2   func ,g         0
+  _Excep_TMR3_OVI3
+                                  fffa6104         2   func ,g         0
+  _Excep_DMAC_DMAC0I
+                                  fffa6106         2   func ,g         0
+  _Excep_DMAC_DMAC1I
+                                  fffa6108         2   func ,g         0
+  _Excep_DMAC_DMAC2I
+                                  fffa610a         2   func ,g         0
+  _Excep_DMAC_DMAC3I
+                                  fffa610c         2   func ,g         0
+  _Excep_EXDMAC_EXDMAC0I
+                                  fffa610e         2   func ,g         0
+  _Excep_EXDMAC_EXDMAC1I
+                                  fffa6110         2   func ,g         0
+  _Excep_SCI0_ERI0
+                                  fffa6112         2   func ,g         0
+  _Excep_SCI0_RXI0
+                                  fffa6114         1   func ,g         0
+  _Excep_SCI0_TXI0
+                                  fffa6115         1   func ,g         0
+  _Excep_SCI0_TEI0
+                                  fffa6116         2   func ,g         0
+  _Excep_SCI1_ERI1
+                                  fffa6118         2   func ,g         0
+  _Excep_SCI1_RXI1
+                                  fffa611a         2   func ,g         0
+  _Excep_SCI1_TXI1
+                                  fffa611c         2   func ,g         0
+  _Excep_SCI1_TEI1
+                                  fffa611e         2   func ,g         0
+  _Excep_SCI2_ERI2
+                                  fffa6120         2   func ,g         0
+  _Excep_SCI2_RXI2
+                                  fffa6122         2   func ,g         0
+  _Excep_SCI2_TXI2
+                                  fffa6124         2   func ,g         0
+  _Excep_SCI2_TEI2
+                                  fffa6126         2   func ,g         0
+  _Excep_SCI3_ERI3
+                                  fffa6128         2   func ,g         0
+  _Excep_SCI3_RXI3
+                                  fffa612a         2   func ,g         0
+  _Excep_SCI3_TXI3
+                                  fffa612c         2   func ,g         0
+  _Excep_SCI3_TEI3
+                                  fffa612e         2   func ,g         0
+  _Excep_SCI5_ERI5
+                                  fffa6130         1   func ,g         0
+  _Excep_SCI5_RXI5
+                                  fffa6131         1   func ,g         0
+  _Excep_SCI5_TXI5
+                                  fffa6132         1   func ,g         0
+  _Excep_SCI5_TEI5
+                                  fffa6133         1   func ,g         0
+  _Excep_SCI6_ERI6
+                                  fffa6134         2   func ,g         0
+  _Excep_SCI6_RXI6
+                                  fffa6136         2   func ,g         0
+  _Excep_SCI6_TXI6
+                                  fffa6138         2   func ,g         0
+  _Excep_SCI6_TEI6
+                                  fffa613a         2   func ,g         0
+  _Excep_RIIC0_ICEEI0
+                                  fffa613c         1   func ,g         0
+  _Excep_RIIC0_ICRXI0
+                                  fffa613d         1   func ,g         0
+  _Excep_RIIC0_ICTXI0
+                                  fffa613e         1   func ,g         0
+  _Excep_RIIC0_ICTEI0
+                                  fffa613f         1   func ,g         0
+  _Excep_RIIC1_ICEEI1
+                                  fffa6140         2   func ,g         0
+  _Excep_RIIC1_ICRXI1
+                                  fffa6142         2   func ,g         0
+  _Excep_RIIC1_ICTXI1
+                                  fffa6144         2   func ,g         0
+  _Excep_RIIC1_ICTEI1
+                                  fffa6146         2   func ,g         0
+
+SECTION=P
+FILE=.\src\62N_PBGlider.obj
+                                  fffa8000  fffa84f0       4f1
+  ControlLoop::setMode(ControlLoop::Mode)
+                                  fffa8000         3   func ,l         1
+  ControlLoop::setOnetime(ControlLoop::Onetime)
+                                  fffa8003         3   func ,l         1
+  ControlLoop::setPrintmode(ControlLoop::PrintMode)
+                                  fffa8006         3   func ,l         1
+  EventHandler::EventHandler()
+                                  fffa8009        13   func ,l         1
+  EventHandler::~EventHandler()
+                                  fffa801c        12   func ,l         2
+  WrapperSciReceiver::setCrReceivedHandler(EventHandler *)
+                                  fffa802e         3   func ,l         2
+  WrapperSciReceiver::getBuffer()
+                                  fffa8031         c   func ,l         1
+  WrapperSciReceiver::getBufferSize()
+                                  fffa803d         3   func ,l         1
+  CrReceivedHandler::hexToInt(char)
+                                  fffa8040        2f   func ,l         2
+  CrReceivedHandler::hexToChar(char, char)
+                                  fffa806f        1d   func ,l         5
+  CrReceivedHandler::CrReceivedHandler(HalSci0 *)
+                                  fffa808c        27   func ,l         1
+  CrReceivedHandler::~CrReceivedHandler()
+                                  fffa80b3        23   func ,l         1
+  CrReceivedHandler::actionPerformed()
+                                  fffa80d6       290   func ,l         1
+  initSystem()
+                                  fffa8366         c   func ,g         1
+  initPeriperals()
+                                  fffa8372       165   func ,g         1
+  _main
+                                  fffa84d7        19   func ,g         1
+  _abort
+                                  fffa84f0         1   func ,g         1
+FILE=.\src\ControlLogic.obj
+                                  fffa84f1  fffa87c7       2d7
+  ControlLogic::ControlLogic()
+                                  fffa84f1        6f   func ,g         1
+  ControlLogic::fullManual()
+                                  fffa8560        24   func ,g         1
+  ControlLogic::calcGlideGainCompensation()
+                                  fffa8584        51   func ,g         2
+  ControlLogic::glide()
+                                  fffa85d5       1f3   func ,g         1
+FILE=.\src\ControlLoop.obj
+                                  fffa87c8  fffa9565       d9e
+  HalServoMtus::getChNum()
+                                  fffa87c8         3   func ,l         1
+  HalServoMtus::getTrim(int)
+                                  fffa87cb         7   func ,l         4
+  HalServoMtus::setTrim(int, short)
+                                  fffa87d2         7   func ,l         1
+  HalServoMtus::saveTrim()
+                                  fffa87d9         9   func ,l         1
+  ControlLoop::ControlLoop()
+                                  fffa87e2        34   func ,g         1
+  ControlLoop::controlLoop()
+                                  fffa8816        c4   func ,g         1
+  ControlLoop::trimCalibration()
+                                  fffa88da       104   func ,g         1
+  ControlLoop::parseFloat()
+                                  fffa89de        78   func ,g         f
+  ControlLoop::setGlideAttitude()
+                                  fffa8a56        84   func ,g         1
+  ControlLoop::setGlideGain()
+                                  fffa8ada       12f   func ,g         1
+  ControlLoop::setGlideGyroGain()
+                                  fffa8c09        ab   func ,g         1
+  ControlLoop::setFlareParams()
+                                  fffa8cb4        d4   func ,g         1
+  ControlLoop::printAltitude()
+                                  fffa8d88        47   func ,g         1
+  ControlLoop::printAttitude()
+                                  fffa8dcf       2e0   func ,g         1
+  ControlLoop::printAttitudeEarthFrame()
+                                  fffa90af       2ce   func ,g         1
+  ControlLoop::printHeadTrack()
+                                  fffa937d        ac   func ,g         1
+  ControlLoop::setManualControlParamter(float, float, float, float, float)
+                                  fffa9429        19   func ,g         1
+  ControlLoop::showHelp()
+                                  fffa9442       124   func ,g         1
+FILE=.\src\Util.obj
+                                  fffa9566  fffa9608        a3
+  Util::myException(char *)
+                                  fffa9566         1   func ,g         b
+  Util::myWait(int)
+                                  fffa9567        29   func ,g        20
+  Util::myWaitShort(int)
+                                  fffa9590        50   func ,g         0
+  Util::limitValue(float, float)
+                                  fffa95e0        19   func ,g         0
+  Util::limitValue(float, float, float)
+                                  fffa95f9        10   func ,g         0
+FILE=.\src\sbrk.obj
+                                  fffa9609  fffa9625        1d
+  _sbrk
+                                  fffa9609        1d   func ,g         1
+FILE=.\src\Peripherals\Bmp085.obj
+                                  fffa9626  fffa9b33       50e
+  Bmp085::Bmp085(int)
+                                  fffa9626        2e   func ,g         1
+  Bmp085::readPressureCalibrationData()
+                                  fffa9654       1cf   func ,g         1
+  Bmp085::setReference()
+                                  fffa9823         8   func ,g         1
+  Bmp085::resetReference()
+                                  fffa982b         4   func ,g         1
+  Bmp085::measurePrsTemp()
+                                  fffa982f         d   func ,g         3
+  Bmp085::readPrsTemp()
+                                  fffa983c        20   func ,g         3
+  Bmp085::measurePressure()
+                                  fffa985c         c   func ,g         3
+  Bmp085::readPressure()
+                                  fffa9868        2d   func ,g         3
+  Bmp085::updatePressure()
+                                  fffa9895       28d   func ,g         3
+  Bmp085::getPaPressure()
+                                  fffa9b22         3   func ,g         0
+  Bmp085::getPaReferencePressure()
+                                  fffa9b25         3   func ,g         0
+  Bmp085::getDegTemp()
+                                  fffa9b28         3   func ,g         0
+  Bmp085::getDegReferenceTemp()
+                                  fffa9b2b         3   func ,g         0
+  Bmp085::getM_Height()
+                                  fffa9b2e         3   func ,g         1
+  Bmp085::getMpsSpeed()
+                                  fffa9b31         3   func ,g         1
+FILE=.\src\Peripherals\GpsCrReceivedHandler.obj
+                                  fffa9b34  fffa9fc7       494
+  EventHandler::EventHandler()
+                                  fffa9b34        13   func ,l         1
+  EventHandler::~EventHandler()
+                                  fffa9b47        12   func ,l         2
+  WrapperSciReceiver::getBuffer()
+                                  fffa9b59         c   func ,l         1
+  GpsCrReceivedHandler::GpsCrReceivedHandler(HalSci5 *)
+                                  fffa9b65        48   func ,g         1
+  GpsCrReceivedHandler::~GpsCrReceivedHandler()
+                                  fffa9bad        23   func ,g         1
+  GpsCrReceivedHandler::isNewDataAvailable()
+                                  fffa9bd0         3   func ,g         1
+  GpsCrReceivedHandler::clearIsNewDataAvailable()
+                                  fffa9bd3         4   func ,g         1
+  GpsCrReceivedHandler::isValid()
+                                  fffa9bd7         3   func ,g         0
+  GpsCrReceivedHandler::getHour()
+                                  fffa9bda         3   func ,g         0
+  GpsCrReceivedHandler::getMin()
+                                  fffa9bdd         3   func ,g         0
+  GpsCrReceivedHandler::getSec()
+                                  fffa9be0         3   func ,g         0
+  GpsCrReceivedHandler::getDegLattitudeInt()
+                                  fffa9be3         3   func ,g         0
+  GpsCrReceivedHandler::getDegLattitudeFraction()
+                                  fffa9be6         3   func ,g         0
+  GpsCrReceivedHandler::getDegLongitudeInt()
+                                  fffa9be9         3   func ,g         0
+  GpsCrReceivedHandler::getDegLongitudeFraction()
+                                  fffa9bec         3   func ,g         0
+  GpsCrReceivedHandler::getMpsSpeed()
+                                  fffa9bef         3   func ,g         2
+  GpsCrReceivedHandler::getDegCourse()
+                                  fffa9bf2         3   func ,g         2
+  GpsCrReceivedHandler::getMpsSpeedX()
+                                  fffa9bf5        28   func ,g         1
+  GpsCrReceivedHandler::getMpsSpeedY()
+                                  fffa9c1d        2f   func ,g         1
+  GpsCrReceivedHandler::setRefPosition()
+                                  fffa9c4c        11   func ,g         1
+  GpsCrReceivedHandler::resetRefPosition()
+                                  fffa9c5d         b   func ,g         1
+  GpsCrReceivedHandler::getM_RelativePosX()
+                                  fffa9c68        46   func ,g         3
+  GpsCrReceivedHandler::getM_RelativePosY()
+                                  fffa9cae        56   func ,g         3
+  GpsCrReceivedHandler::decodeTime(char *)
+                                  fffa9d04        78   func ,g         1
+  GpsCrReceivedHandler::decodeIsValid(char *)
+                                  fffa9d7c        10   func ,g         1
+  GpsCrReceivedHandler::decodeLattitude_Longitude(char *, int *, int *)
+                                  fffa9d8c        6d   func ,g         2
+  GpsCrReceivedHandler::knotToMps(float)
+                                  fffa9df9         a   func ,g         1
+  GpsCrReceivedHandler::decodeSpeed(char *)
+                                  fffa9e03        5e   func ,g         1
+  GpsCrReceivedHandler::decodeCourse(char *)
+                                  fffa9e61        6d   func ,g         1
+  GpsCrReceivedHandler::decodeGPRMC(char *)
+                                  fffa9ece        57   func ,g         1
+  GpsCrReceivedHandler::decodeNMEA(char *)
+                                  fffa9f25        26   func ,g         1
+  GpsCrReceivedHandler::actionPerformed()
+                                  fffa9f4b        14   func ,g         1
+  GpsCrReceivedHandler::test()
+                                  fffa9f5f        69   func ,g         0
+FILE=.\src\Peripherals\Inu.obj
+                                  fffa9fc8  fffaa1b4       1ed
+  Inu::Inu()
+                                  fffa9fc8        28   func ,g         1
+  Inu::~Inu()
+                                  fffa9ff0         b   func ,g         0
+  Inu::update()
+                                  fffa9ffb        b2   func ,g         0
+  Inu::reset()
+                                  fffaa0ad        12   func ,g         1
+  Inu::getE_FramePos(int)
+                                  fffaa0bf         4   func ,g         3
+  Inu::getE_FrameSpeed(int)
+                                  fffaa0c3         6   func ,g         5
+  Inu::getB_FrameSpeed()
+                                  fffaa0c9        6c   func ,g         0
+  Inu::getE_FrameAccel()
+                                  fffaa135        80   func ,g         4
+FILE=.\src\Peripherals\KalmanFilter.obj
+                                  fffaa1b5  fffaadec       c38
+  Matrix3f::Matrix3f()
+                                  fffaa1b5        30   func ,l        11
+  Matrix3f::Matrix3f(int, int)
+                                  fffaa1e5        36   func ,l         6
+  Matrix3f::Matrix3f(float, int, int)
+                                  fffaa21b        31   func ,l         7
+  Matrix3f::Matrix3f(const Matrix3f &)
+                                  fffaa24c        40   func ,l         b
+  Matrix3f::~Matrix3f()
+                                  fffaa28c         b   func ,l        38
+  Matrix3f::getNum(int, int)
+                                  fffaa297         b   func ,l         6
+  Matrix3f::setNum(float, int, int)
+                                  fffaa2a2         b   func ,l        2e
+  Matrix3f::getRow()
+                                  fffaa2ad         3   func ,l         3
+  Matrix3f::getColumn()
+                                  fffaa2b0         3   func ,l         4
+  Matrix3f::add(Matrix3f)
+                                  fffaa2b3        70   func ,l         4
+  Matrix3f::sub(Matrix3f)
+                                  fffaa323        70   func ,l         2
+  Matrix3f::mul(Matrix3f)
+                                  fffaa393        93   func ,l         c
+  Matrix3f::mul(float)
+                                  fffaa426        44   func ,l         1
+  Matrix3f::trans()
+                                  fffaa46a        76   func ,l         2
+  Matrix3f::det2x2()
+                                  fffaa4e0        12   func ,l         1
+  Matrix3f::det3x3()
+                                  fffaa4f2        50   func ,l         1
+  Matrix3f::inverse2x2()
+                                  fffaa542        60   func ,l         1
+  Matrix3f::inverse3x3()
+                                  fffaa5a2       11f   func ,l         1
+  Matrix3f::inverse()
+                                  fffaa6c1        3c   func ,l         2
+  Matrix3f::print()
+                                  fffaa6fd        56   func ,l         1
+  KalmanFilter::KalmanFilter(float, float, float, float, float)
+                                  fffaa753        73   func ,g         3
+  KalmanFilter::~KalmanFilter()
+                                  fffaa7c6        64   func ,g         0
+  KalmanFilter::reset()
+                                  fffaa82a       20f   func ,g         2
+  KalmanFilter::predict(float)
+                                  fffaaa39       116   func ,g         3
+  KalmanFilter::update(float, float)
+                                  fffaab4f       21d   func ,g         3
+  KalmanFilter::test()
+                                  fffaad6c        6f   func ,g         0
+  KalmanFilter::getMpsSpd()
+                                  fffaaddb         9   func ,g         1
+  KalmanFilter::getM_RelPos()
+                                  fffaade4         9   func ,g         1
+FILE=.\src\Peripherals\Mpu9150.obj
+                                  fffaaded  fffabe37      104b
+  Mpu9150::Mpu9150()
+                                  fffaaded       1a1   func ,g         1
+  Mpu9150::initBias()
+                                  fffaaf8e        36   func ,g         1
+  Mpu9150::initCMT0()
+                                  fffaafc4        4a   func ,g         1
+  Mpu9150::start()
+                                  fffab00e         c   func ,g         2
+  Mpu9150::stop()
+                                  fffab01a         c   func ,g         1
+  Mpu9150::measure()
+                                  fffab026       14b   func ,g         6
+  Mpu9150::test()
+                                  fffab171        c3   func ,g         0
+  Mpu9150::initSensors()
+                                  fffab234        dc   func ,g         1
+  Mpu9150::rawToG_Accel(int)
+                                  fffab310        48   func ,g         1
+  Mpu9150::rawToRpsGyro(int)
+                                  fffab358        4b   func ,g         1
+  Mpu9150::rawTo_uT_Cmps(int)
+                                  fffab3a3        63   func ,g         1
+  Mpu9150::rawToTemp()
+                                  fffab406         d   func ,g         1
+  Mpu9150::getG_Accel(int)
+                                  fffab413         7   func ,g        10
+  Mpu9150::getRpsGyro(int)
+                                  fffab41a         7   func ,g         b
+  Mpu9150::get_uT_Cmps(int)
+                                  fffab421         7   func ,g         f
+  Mpu9150::getTemp()
+                                  fffab428         3   func ,g         1
+  Mpu9150::getHzUpdateRate()
+                                  fffab42b         7   func ,g         1
+  Mpu9150::getMpsKalmanSpeed(int)
+                                  fffab432         c   func ,g         3
+  Mpu9150::getM_KalmanPos(int)
+                                  fffab43e         c   func ,g         3
+  Mpu9150::resetKalmanFilter()
+                                  fffab44a        2d   func ,g         1
+  Mpu9150::getInstance()
+                                  fffab477         9   func ,g        11
+  Mpu9150::CMT0vect()
+                                  fffab480       19e   func ,g         0
+  Mpu9150::gyroCalibration()
+                                  fffab61e       100   func ,g         1
+  Mpu9150::compassCalibration()
+                                  fffab71e       274   func ,g         1
+  Mpu9150::updateAclBias()
+                                  fffab992       171   func ,g         0
+  Mpu9150::acceloCalibration()
+                                  fffabb03       26f   func ,g         1
+  Mpu9150::readGyroBias()
+                                  fffabd72        21   func ,g         1
+  Mpu9150::showGyroBias()
+                                  fffabd93        42   func ,g         1
+  Mpu9150::readCompassBias()
+                                  fffabdd5        21   func ,g         1
+  Mpu9150::showCompassBias()
+                                  fffabdf6        42   func ,g         1
+FILE=.\src\Peripherals\OrientationFilter.obj
+                                  fffabe38  fffacbfa       dc3
+  OrientationFilter::updateBeta()
+                                  fffabe38        4d   func ,g         1
+  OrientationFilter::updateAttitude()
+                                  fffabe85        4b   func ,g         2
+  OrientationFilter::initOrientationFilter(float, float, float, float, float, float, float, float, float)
+                                  fffabed0       2b6   func ,g         1
+  OrientationFilter::filterUpdate(float, float, float, float, float, float, float, float, float)
+                                  fffac186       6be   func ,g         1
+  OrientationFilter::MadgwickAHRSupdateIMU(float, float, float, float, float, float)
+                                  fffac844       325   func ,g         1
+  OrientationFilter::invSqrt(float)
+                                  fffacb69        2e   func ,g         7
+  OrientationFilter::getAttitude()
+                                  fffacb97         f   func ,g        11
+  OrientationFilter::getGyroBias(int)
+                                  fffacba6        28   func ,g         0
+  function which calls global constructor in compile unit
+                                  fffacbce        2d   func ,l         1
+FILE=.\src\Peripherals\Quaternion.obj
+                                  fffacbfb  fffad243       649
+  Quaternion::Quaternion()
+                                  fffacbfb        1a   func ,g         6
+  Quaternion::Quaternion(float, float, float, float)
+                                  fffacc15        25   func ,g        14
+  Quaternion::~Quaternion()
+                                  fffacc3a         b   func ,g        4e
+  Quaternion::add(Quaternion)
+                                  fffacc45         1   func ,g         0
+  Quaternion::mul(Quaternion)
+                                  fffacc46        91   func ,g        11
+  Quaternion::mul(float)
+                                  fffaccd7        1d   func ,g         1
+  Quaternion::con()
+                                  fffaccf4        1c   func ,g         3
+  Quaternion::con(Quaternion)
+                                  fffacd10        1e   func ,g         4
+  Quaternion::normalize()
+                                  fffacd2e        46   func ,g         8
+  Quaternion::rotate(Quaternion)
+                                  fffacd74        83   func ,g         2
+  Quaternion::getRadHeading()
+                                  fffacdf7        95   func ,g         5
+  Quaternion::getRadPitch(float)
+                                  ffface8c        fd   func ,g         4
+  Quaternion::getRadRole(float, float)
+                                  fffacf89        e0   func ,g         4
+  Quaternion::getRadPitchRoleHeading(float *, float *, float *)
+                                  fffad069        26   func ,g         3
+  Quaternion::getRadSlant()
+                                  fffad08f        6b   func ,g         0
+  Quaternion::vectDot(Quaternion)
+                                  fffad0fa        1b   func ,g         1
+  Quaternion::vectCross(Quaternion)
+                                  fffad115        42   func ,g         1
+  Quaternion::print()
+                                  fffad157        62   func ,g         0
+  Quaternion::printPitchRoleHeading()
+                                  fffad1b9        8b   func ,g         0
+FILE=.\src\Peripherals\RangeFinder.obj
+                                  fffad244  fffad2c8        85
+  RangeFinder::RangeFinder(HalRangeFinderMtu *)
+                                  fffad244        15   func ,g         1
+  RangeFinder::~RangeFinder()
+                                  fffad259         b   func ,g         0
+  RangeFinder::start()
+                                  fffad264         6   func ,g         1
+  RangeFinder::stop()
+                                  fffad26a         6   func ,g         0
+  RangeFinder::pulseWidthToM(float)
+                                  fffad270        18   func ,g         3
+  RangeFinder::getM_Range()
+                                  fffad288        12   func ,g         2
+  RangeFinder::getMpsSpeed()
+                                  fffad29a        2f   func ,g         0
+FILE=.\src\Peripherals\Servo.obj
+                                  fffad2c9  fffad30a        42
+  Servo::Servo()
+                                  fffad2c9        16   func ,g         1
+  Servo::~Servo()
+                                  fffad2df        13   func ,g         2
+  Servo::setPitch(float)
+                                  fffad2f2         3   func ,g         3
+  Servo::setRole(float)
+                                  fffad2f5         3   func ,g         3
+  Servo::setYaw(float)
+                                  fffad2f8         3   func ,g         3
+  Servo::setFlaps(float)
+                                  fffad2fb         3   func ,g         1
+  Servo::setThrottle(float)
+                                  fffad2fe         3   func ,g         1
+  Servo::nativeSetServos(int, float)
+                                  fffad301         a   func ,g         0
+FILE=.\src\Peripherals\StdSci.obj
+                                  fffad30b  fffad84b       541
+  WrapperBufferedSci::lock()
+                                  fffad30b         1   func ,l         1
+  WrapperBufferedSci::unlock()
+                                  fffad30c         1   func ,l         1
+  WrapperBufferedSci::sendNext()
+                                  fffad30d         1   func ,l         1
+  WrapperBufferedSci::~WrapperBufferedSci()
+                                  fffad30e        23   func ,l         1
+  WrapperBufferedSci::putChar(char)
+                                  fffad331        49   func ,l         8
+  StdSci::StdSci(WrapperBufferedSci *)
+                                  fffad37a        15   func ,g         1
+  StdSci::~StdSci()
+                                  fffad38f        1d   func ,g         0
+  StdSci::putChar(char)
+                                  fffad3ac         7   func ,g         2
+  StdSci::putString(char *)
+                                  fffad3b3        16   func ,g        bc
+  StdSci::putShortHex(short)
+                                  fffad3c9        54   func ,g         4
+  StdSci::putShort(short)
+                                  fffad41d        5e   func ,g         0
+  StdSci::putInt(int)
+                                  fffad47b        5a   func ,g         1
+  StdSci::putIntZeroFill(int, int)
+                                  fffad4d5        48   func ,g         1
+  StdSci::myStrCopy(char *, char *)
+                                  fffad51d        23   func ,g         1
+  StdSci::getStrLength(char *)
+                                  fffad540         e   func ,g         1
+  StdSci::putInt(char *, int)
+                                  fffad54e        7e   func ,g         0
+  StdSci::putInt2(int)
+                                  fffad5cc        eb   func ,g         3
+  StdSci::myRoundf(float)
+                                  fffad6b7        53   func ,g         2
+  StdSci::myRoundf(float, int)
+                                  fffad70a        35   func ,g         0
+  StdSci::intPow(int, int)
+                                  fffad73f        11   func ,g         1
+  StdSci::hexToChar(char, char)
+                                  fffad750        1d   func ,g         0
+  StdSci::hexToInt(char)
+                                  fffad76d        2f   func ,g         2
+  StdSci::putZeros(int)
+                                  fffad79c        2f   func ,g         1
+  StdSci::putFloat(float, int)
+                                  fffad7cb        7d   func ,g         5
+  StdSci::putFloat(float)
+                                  fffad848         4   func ,g        50
+FILE=.\src\Peripherals\Storage.obj
+                                  fffad84c  fffadab0       265
+  Storage::init()
+                                  fffad84c         4   func ,g         1
+  Storage::writeGyroBias(float *)
+                                  fffad850        2b   func ,g         1
+  Storage::readGyroBias(float *)
+                                  fffad87b        2b   func ,g         1
+  Storage::writeTrim(short *, int)
+                                  fffad8a6        36   func ,g         1
+  Storage::readTrim(short *, int)
+                                  fffad8dc        31   func ,g         1
+  Storage::writeGlideAttitude(float, float)
+                                  fffad90d        25   func ,g         1
+  Storage::readGlideAttitude(float *, float *)
+                                  fffad932        23   func ,g         1
+  Storage::writeGlideGain(float, float, float, float, float, float)
+                                  fffad955        31   func ,g         1
+  Storage::readGlideGain(float *, float *, float *, float *, float *, float *)
+                                  fffad986        37   func ,g         1
+  Storage::writeCompassBias(float *)
+                                  fffad9bd        2c   func ,g         1
+  Storage::readCompassBias(float *)
+                                  fffad9e9        2c   func ,g         1
+  Storage::writeGlideGyroGain(float, float, float)
+                                  fffada15        24   func ,g         1
+  Storage::readGlideGyroGain(float *, float *, float *)
+                                  fffada39        28   func ,g         1
+  Storage::writeFlareParam(float, float, float, float)
+                                  fffada61        23   func ,g         1
+  Storage::readFlareParam(float *, float *, float *, float *)
+                                  fffada84        2d   func ,g         1
+FILE=.\src\Peripherals\Hals\HalFlash.obj
+                                  fffadab1  fffadf8c       4dc
+  HalFlash::init()
+                                  fffadab1        50   func ,g         1
+  HalFlash::setPclock()
+                                  fffadb01        47   func ,g         1
+  HalFlash::statusClear()
+                                  fffadb48        33   func ,g         1
+  HalFlash::errorCheck()
+                                  fffadb7b        9f   func ,g         5
+  HalFlash::resetFCU()
+                                  fffadc1a        31   func ,g         6
+  HalFlash::read8Byte(short *, int, int, int)
+                                  fffadc4b        80   func ,g         1
+  HalFlash::blankCheck(int, int)
+                                  fffadccb        b0   func ,g         0
+  HalFlash::write8Byte(short *, int, int)
+                                  fffadd7b        9d   func ,g         1
+  HalFlash::erase(int)
+                                  fffade18        85   func ,g         1
+  HalFlash::readBlockToBuffer()
+                                  fffade9d        26   func ,g         1
+  HalFlash::setbank(int)
+                                  fffadec3         a   func ,g         e
+  HalFlash::finalize()
+                                  fffadecd        34   func ,g         7
+  HalFlash::write(char *, int, int)
+                                  fffadf01        1a   func ,g         7
+  HalFlash::read(char *, int, int)
+                                  fffadf1b        1a   func ,g         7
+  HalFlash::debugPrintCurrentBlock()
+                                  fffadf35        58   func ,g         0
+FILE=.\src\Peripherals\Hals\HalI2C.obj
+                                  fffadf8d  fffae438       4ac
+  I2C_Packet::I2C_Packet(unsigned char, unsigned char, unsigned char)
+                                  fffadf8d        23   func ,l         1
+  I2C_Packet::I2C_Packet(unsigned char, unsigned char, unsigned char *)
+                                  fffadfb0        23   func ,l         1
+  I2C_Packet::I2C_Packet()
+                                  fffadfd3        15   func ,l         1
+  I2C_Packet::genWritePacket(unsigned char, unsigned char, unsigned char)
+                                  fffadfe8        19   func ,l         1
+  I2C_Packet::genReadPacket(unsigned char, unsigned char, unsigned char *)
+                                  fffae001        17   func ,l         1
+  I2C_Packet::getDevAddress()
+                                  fffae018         3   func ,l         2
+  I2C_Packet::getRw()
+                                  fffae01b         3   func ,l         2
+  I2C_Packet::getMemAddress()
+                                  fffae01e         3   func ,l         1
+  I2C_Packet::getWriteData()
+                                  fffae021         3   func ,l         1
+  I2C_Packet::getP_ReadData()
+                                  fffae024         3   func ,l         1
+  I2C::initRIIC0()
+                                  fffae027        e7   func ,g         2
+  I2C::busRescue()
+                                  fffae10e        14   func ,g         1
+  I2C::busStart()
+                                  fffae122        24   func ,g         2
+  I2C::ICEEI0()
+                                  fffae146       100   func ,g         0
+  I2C::ICRXI0()
+                                  fffae246        5f   func ,g         0
+  I2C::ICTEI0()
+                                  fffae2a5        37   func ,g         0
+  I2C::ICTXI0()
+                                  fffae2dc        ca   func ,g         0
+  I2C::appendPacket(I2C_Packet)
+                                  fffae3a6        4d   func ,g         2
+  I2C::i2cDevRead(unsigned char, unsigned char, unsigned char *)
+                                  fffae3f3        13   func ,g        32
+  I2C::i2cDevWrite(unsigned char, unsigned char, unsigned char)
+                                  fffae406        15   func ,g        11
+  I2C::isBufferEmpty()
+                                  fffae41b         9   func ,g         6
+  function which calls global constructor in compile unit
+                                  fffae424        15   func ,l         1
+FILE=.\src\Peripherals\Hals\HalRangeFinderMtu.obj
+                                  fffae439  fffae524        ec
+  HalRangeFinderMtu::initModuleMtu4()
+                                  fffae439        68   func ,g         1
+  HalRangeFinderMtu::HalRangeFinderMtu()
+                                  fffae4a1        22   func ,g         1
+  HalRangeFinderMtu::getInstance()
+                                  fffae4c3         9   func ,g         3
+  HalRangeFinderMtu::start()
+                                  fffae4cc         9   func ,g         1
+  HalRangeFinderMtu::stop()
+                                  fffae4d5         9   func ,g         2
+  HalRangeFinderMtu::getPulseWidth()
+                                  fffae4de         3   func ,g         2
+  HalRangeFinderMtu::getPulseWidthPrev()
+                                  fffae4e1         3   func ,g         1
+  HalRangeFinderMtu::updatePulseWidth()
+                                  fffae4e4        17   func ,g         1
+  HalRangeFinderMtu::TGIC4()
+                                  fffae4fb        12   func ,g         0
+  function which calls global constructor in compile unit
+                                  fffae50d        18   func ,l         1
+FILE=.\src\Peripherals\Hals\HalSci0.obj
+                                  fffae525  fffae826       302
+  WrapperBufferedSci::lock()
+                                  fffae525         1   func ,l         1
+  WrapperBufferedSci::unlock()
+                                  fffae526         1   func ,l         1
+  WrapperBufferedSci::sendNext()
+                                  fffae527         1   func ,l         1
+  WrapperBufferedSci::WrapperBufferedSci()
+                                  fffae528        32   func ,l         1
+  WrapperBufferedSci::dequeTxBuffer()
+                                  fffae55a        1c   func ,l         1
+  WrapperBufferedSci::isTxBufferEmpty()
+                                  fffae576         a   func ,l         1
+  WrapperSciReceiver::crReceived()
+                                  fffae580        11   func ,l         1
+  WrapperSciReceiver::rxBufferFull()
+                                  fffae591        11   func ,l         1
+  WrapperSciReceiver::WrapperSciReceiver()
+                                  fffae5a2        3d   func ,l         1
+  WrapperSciReceiver::appendRxBuf(char)
+                                  fffae5df        68   func ,l         1
+  HalSci0::HalSci0()
+                                  fffae647        a5   func ,g         1
+  HalSci0::lock()
+                                  fffae6ec         a   func ,l         1
+  HalSci0::unlock()
+                                  fffae6f6         a   func ,l         1
+  HalSci0::sendNext()
+                                  fffae700        26   func ,g         1
+  HalSci0::nativeSend(char)
+                                  fffae726         c   func ,g         0
+  HalSci0::received()
+                                  fffae732        49   func ,g         1
+  HalSci0::setEcho(int)
+                                  fffae77b         b   func ,g         1
+  HalSci0::start()
+                                  fffae786        16   func ,g         1
+  HalSci0::getchar()
+                                  fffae79c        3e   func ,g         2
+  HalSci0::getInstance()
+                                  fffae7da         9   func ,g         b
+  HalSci0::txi()
+                                  fffae7e3        19   func ,g         0
+  HalSci0::rxi()
+                                  fffae7fc        12   func ,g         0
+  function which calls global constructor in compile unit
+                                  fffae80e        19   func ,l         1
+FILE=.\src\Peripherals\Hals\HalSci5.obj
+                                  fffae827  fffaeaa2       27c
+  WrapperBufferedSci::lock()
+                                  fffae827         1   func ,l         1
+  WrapperBufferedSci::unlock()
+                                  fffae828         1   func ,l         1
+  WrapperBufferedSci::sendNext()
+                                  fffae829         1   func ,l         1
+  WrapperBufferedSci::WrapperBufferedSci()
+                                  fffae82a        32   func ,l         1
+  WrapperBufferedSci::dequeTxBuffer()
+                                  fffae85c        1c   func ,l         1
+  WrapperBufferedSci::isTxBufferEmpty()
+                                  fffae878         a   func ,l         1
+  WrapperSciReceiver::crReceived()
+                                  fffae882        11   func ,l         1
+  WrapperSciReceiver::rxBufferFull()
+                                  fffae893        11   func ,l         1
+  WrapperSciReceiver::WrapperSciReceiver()
+                                  fffae8a4        3d   func ,l         1
+  WrapperSciReceiver::appendRxBuf(char)
+                                  fffae8e1        68   func ,l         1
+  HalSci5::HalSci5()
+                                  fffae949        9c   func ,g         1
+  HalSci5::lock()
+                                  fffae9e5         a   func ,l         1
+  HalSci5::unlock()
+                                  fffae9ef         a   func ,l         1
+  HalSci5::sendNext()
+                                  fffae9f9        26   func ,g         1
+  HalSci5::nativeSend(char)
+                                  fffaea1f         c   func ,g         0
+  HalSci5::received()
+                                  fffaea2b        15   func ,g         1
+  HalSci5::start()
+                                  fffaea40        16   func ,g         1
+  HalSci5::getInstance()
+                                  fffaea56         9   func ,g         6
+  HalSci5::txi()
+                                  fffaea5f        19   func ,g         0
+  HalSci5::rxi()
+                                  fffaea78        12   func ,g         0
+  function which calls global constructor in compile unit
+                                  fffaea8a        19   func ,l         1
+FILE=.\src\Peripherals\Hals\HalServoMtus.obj
+                                  fffaeaa3  fffaef4d       4ab
+  HalServoMtus::loadTrim()
+                                  fffaeaa3         9   func ,l         1
+  HalServoMtus::initMtu6()
+                                  fffaeaac        9a   func ,g         1
+  HalServoMtus::initMtu7()
+                                  fffaeb46        74   func ,g         1
+  HalServoMtus::initMtu8()
+                                  fffaebba        74   func ,g         1
+  HalServoMtus::initMtu9()
+                                  fffaec2e        9d   func ,g         1
+  HalServoMtus::initMtu10()
+                                  fffaeccb        84   func ,g         1
+  HalServoMtus::HalServoMtus()
+                                  fffaed4f        59   func ,g         1
+  HalServoMtus::~HalServoMtus()
+                                  fffaeda8        2a   func ,g         1
+  HalServoMtus::initPos()
+                                  fffaedd2        1d   func ,g         1
+  HalServoMtus::initTrim()
+                                  fffaedef        16   func ,g         1
+  HalServoMtus::start()
+                                  fffaee05        13   func ,g         1
+  HalServoMtus::stop()
+                                  fffaee18         f   func ,g         3
+  HalServoMtus::getInstance()
+                                  fffaee27         9   func ,g        17
+  HalServoMtus::getTrimmedPos(short, float)
+                                  fffaee30        1b   func ,g         1
+  HalServoMtus::setPos(int, float)
+                                  fffaee4b        11   func ,g         1
+  HalServoMtus::calcServoPos()
+                                  fffaee5c        76   func ,g         1
+  HalServoMtus::updateDuty()
+                                  fffaeed2        51   func ,g         1
+  HalServoMtus::tgic10()
+                                  fffaef23        12   func ,g         0
+  function which calls global constructor in compile unit
+                                  fffaef35        19   func ,l         1
+FILE=acosf
+                                  fffaef4e  fffaf096       149
+  _poly_asinf_neg
+                                  fffaef4e        85   func ,l         1
+  _acosf_special
+                                  fffaefd3        28   func ,l         1
+  _acosf
+                                  fffaeffb        9c   func ,g         3
+  _acos
+                                  fffaeffb         0   func ,g         1
+  _acosl
+                                  fffaeffb         0   func ,g         0
+FILE=atan2f
+                                  fffaf097  fffaf0c2        2c
+  _atan2f
+                                  fffaf097        2c   func ,g         5
+  _atan2
+                                  fffaf097         0   func ,g         1
+  _atan2l
+                                  fffaf097         0   func ,g         0
+FILE=cosf
+                                  fffaf0c3  fffaf0f6        34
+  _cosf
+                                  fffaf0c3        34   func ,g         9
+  _cos
+                                  fffaf0c3         0   func ,g         1
+  _cosl
+                                  fffaf0c3         0   func ,g         0
+FILE=sinf
+                                  fffaf0f7  fffaf139        43
+  _sinf
+                                  fffaf0f7        43   func ,g         a
+  _sin
+                                  fffaf0f7         0   func ,g         1
+  _sinl
+                                  fffaf0f7         0   func ,g         0
+FILE=floorf
+                                  fffaf13a  fffaf16d        34
+  _floorf
+                                  fffaf13a        34   func ,g         4
+  _floor
+                                  fffaf13a         0   func ,g         1
+  _floorl
+                                  fffaf13a         0   func ,g         0
+FILE=powf
+                                  fffaf16e  fffaf199        2c
+  _powf
+                                  fffaf16e        2c   func ,g        13
+  _pow
+                                  fffaf16e         0   func ,g         1
+  _powl
+                                  fffaf16e         0   func ,g         0
+FILE=sqrtf
+                                  fffaf19a  fffaf26f        d6
+  _in_sqrtf1
+                                  fffaf19a        55   func ,l         1
+  _sqrt_rare0
+                                  fffaf1ef        22   func ,l         1
+  _sqrtf
+                                  fffaf211        5f   func ,g         6
+  _sqrt
+                                  fffaf211         0   func ,g         1
+  _sqrtl
+                                  fffaf211         0   func ,g         0
+FILE=delete
+                                  fffaf270  fffaf277         8
+  operator delete(void *)
+                                  fffaf270         8   func ,g         f
+FILE=dtor_list
+                                  fffaf278  fffaf2c7        50
+  __process_needed_destructions()
+                                  fffaf278        24   func ,g         2
+  ___already_marked_for_destruction
+                                  fffaf29c         6   func ,g         1
+  ___record_needed_destruction
+                                  fffaf2a2        24   func ,g         1
+  ___std__needed_destruction_list
+                                  fffaf2c6         2   func ,g         0
+FILE=new
+                                  fffaf2c8  fffaf309        42
+  operator new(unsigned long)
+                                  fffaf2c8        42   func ,g        2d
+FILE=pure_virt
+                                  fffaf30a  fffaf30f         6
+  ___pure_virtual_called
+                                  fffaf30a         6   func ,g         5
+FILE=vec_newdel_old
+                                  fffaf310  fffaf339        2a
+  ___vec_new_eh
+                                  fffaf310         a   func ,g         0
+  ___vec_new
+                                  fffaf31a         4   func ,g         1
+  ___vec_delete
+                                  fffaf31e         e   func ,g         0
+  ___array_delete
+                                  fffaf32c         e   func ,g         0
+FILE=cppinit
+                                  fffaf33a  fffaf358        1f
+  __CALL_INIT
+                                  fffaf33a        1b   func ,g         1
+  __CALL_END
+                                  fffaf355         4   func ,g         1
+FILE=__COM_CMPLT64s
+                                  fffaf359  fffaf365         d
+  __COM_CMPLT64s
+                                  fffaf359         0   none ,g         1
+  cmp_more
+                                  fffaf362         0   none ,l         1
+FILE=__initsct
+                                  fffaf366  fffaf3af        4a
+  __INITSCT
+                                  fffaf366         0   none ,g         1
+  loop1
+                                  fffaf378         0   none ,l         1
+  next_loop1
+                                  fffaf386         0   none ,l         2
+  loop3
+                                  fffaf398         0   none ,l         1
+  next_loop3
+                                  fffaf3a9         0   none ,l         2
+FILE=free
+                                  fffaf3b0  fffaf441        92
+  _free
+                                  fffaf3b0        92   func ,g         6
+FILE=malloc
+                                  fffaf442  fffaf53c        fb
+  _findmem
+                                  fffaf442        8b   func ,l         1
+  _malloc
+                                  fffaf4cd        70   func ,g         6
+FILE=_i_atn2s
+                                  fffaf53d  fffaf56e        32
+  __in_atan2s
+                                  fffaf53d        32   func ,g         1
+FILE=_i_flors
+                                  fffaf56f  fffaf5b9        4b
+  __in_floors
+                                  fffaf56f        4b   func ,g         1
+FILE=_in_pows
+                                  fffaf5ba  fffaf700       147
+  __in_pows
+                                  fffaf5ba       147   func ,g         1
+FILE=asincosfsub
+                                  fffaf701  fffaf7a9        a9
+  ___poly_acosf
+                                  fffaf701        5c   func ,g         1
+  ___poly_acosf_neg
+                                  fffaf75d        4d   func ,g         1
+FILE=nanfval
+                                  fffaf7aa  fffaf7b5         c
+  ___nanf_value
+                                  fffaf7aa         c   func ,g         2
+FILE=sincosfsub
+                                  fffaf7b6  fffaf8d6       121
+  ___poly_sinf
+                                  fffaf7b6        41   func ,g         3
+  ___poly_cosf
+                                  fffaf7f7        2f   func ,g         3
+  _poly_cosfn
+                                  fffaf826         b   func ,l         1
+  _poly_sinfn
+                                  fffaf831         a   func ,l         1
+  _sincosf_special
+                                  fffaf83b        3a   func ,l         1
+  ___internal_sincosf
+                                  fffaf875        62   func ,g         3
+FILE=error
+                                  fffaf8d7  fffaf8da         4
+  ___abort_execution
+                                  fffaf8d7         4   func ,g         3
+FILE=newhandler
+                                  fffaf8db  fffaf8db         1
+  __default_new_handler()
+                                  fffaf8db         1   func ,g         2
+FILE=static_init
+                                  fffaf8dc  fffaf93b        60
+  __call_dtors()
+                                  fffaf8dc        60   func ,g         1
+FILE=vec_newdel
+                                  fffaf93c  fffafc46       30b
+  alloc_array(unsigned long, unsigned long, void *(*)(unsigned long))
+                                  fffaf93c        1c   func ,l         1
+  free_array(void *, unsigned long, unsigned long, void (*)(void *), int)
+                                  fffaf958        14   func ,l         1
+  record_array_alloc_info(void *, unsigned long, long, unsigned long)
+                                  fffaf96c        12   func ,l         1
+  get_array_size(void *, unsigned long, unsigned long *)
+                                  fffaf97e        25   func ,l         1
+  array_new_general(void *, long, unsigned long, unsigned long, void *, void *(*)(void *), void (*)(void *, int), void *(*)(unsigned long), void (*)(void *), int, int)
+                                  fffaf9a3        a4   func ,l         8
+  ___array_new
+                                  fffafa47        2b   func ,g         0
+  ___placement_array_new
+                                  fffafa72        1f   func ,g         0
+  ___vec_new_eh2
+                                  fffafa91        29   func ,g         1
+  ___vec_new2
+                                  fffafaba        2b   func ,g         1
+  ___vec_cctor_eh
+                                  fffafae5        2f   func ,g         0
+  ___array_new_zero
+                                  fffafb14        2d   func ,g         0
+  ___placement_array_new_zero
+                                  fffafb41        22   func ,g         0
+  ___vec_new_eh_zero
+                                  fffafb63        2b   func ,g         0
+  array_delete_general(void *, long, unsigned long, unsigned long, void (*)(void *, int), int, void (*)(void *), int, int)
+                                  fffafb8e        67   func ,l         2
+  ___vec_delete2
+                                  fffafbf5        23   func ,g         1
+  ___array_delete2
+                                  fffafc18        29   func ,g         1
+  __array_pointer_not_from_vec_new
+                                  fffafc41         6   func ,g         1
+FILE=__COM_MUL64
+                                  fffafc47  fffafc52         c
+  __COM_MUL64
+                                  fffafc47         0   none ,g         1
+FILE=xgetmem
+                                  fffafc53  fffafc61         f
+  __Getmem
+                                  fffafc53         f   func ,g         1
+FILE=fmodf
+                                  fffafc62  fffafc8f        2e
+  _fmodf
+                                  fffafc62        2e   func ,g         2
+  _fmod
+                                  fffafc62         0   func ,g         1
+  _fmodl
+                                  fffafc62         0   func ,g         0
+FILE=_i_atans
+                                  fffafc90  fffafe2a       19b
+  __in_atans
+                                  fffafc90       19b   func ,g         1
+FILE=_i_ldes
+                                  fffafe2b  fffafeac        82
+  __in_ldexps
+                                  fffafe2b        82   func ,g         3
+FILE=_in_exps
+                                  fffafead  fffafff1       145
+  __in_exps
+                                  fffafead       145   func ,g         2
+FILE=_in_logs
+                                  fffafff2  fffb00e6        f5
+  __in_logs
+                                  fffafff2        f5   func ,g         2
+FILE=array_del
+                                  fffb00e7  fffb00ea         4
+  operator delete[](void *)
+                                  fffb00e7         4   func ,g         1
+FILE=array_new
+                                  fffb00eb  fffb00ee         4
+  operator new[](unsigned long)
+                                  fffb00eb         4   func ,g         1
+FILE=memzero
+                                  fffb00ef  fffb00f5         7
+  ___memzero
+                                  fffb00ef         7   func ,g         1
+FILE=_a_atans
+                                  fffb00f6  fffb011c        27
+  __app_atans
+                                  fffb00f6        27   func ,g         2
+FILE=_i_fmds
+                                  fffb011d  fffb020c        f0
+  __in_fmods
+                                  fffb011d        f0   func ,g         2
+
+SECTION=FIXEDVECT
+FILE=.\src\vector_table.obj
+                                  ffffff80  ffffffff        80
+  _Fixed_Vectors
+                                  ffffff80        80   data ,g         0
+
+*** Delete Symbols ***
+
+SYMBOL                                SIZE    INFO
